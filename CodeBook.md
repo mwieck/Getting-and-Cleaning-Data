@@ -2,9 +2,7 @@ Getting and Cleaning Data Course Project January 2015
 
 Martin Wieck
 
-This document contains additional information about the variables and transformations needed in the course project from Getting and Cleening Data.
-
-The original source data can be found here?
+This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.
 
 You can find a full description of the source used in this project at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
@@ -29,7 +27,7 @@ subject_id      int         values from 1..30 (a number for each training/test p
 
 The features in the dataset are all numeric and are the calculated average from the original feature normalized and bounded within -1:+1 :
 
-The abbreviations in the variable names mean the following:
+The abbreviations in the variable names have got the following meaning:
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions
 t           time
 f           frequency
