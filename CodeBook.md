@@ -1,8 +1,8 @@
-Getting and Cleaning Data Course Project January 2015
+###Getting and Cleaning Data 
 
-Martin Wieck
+Course Project January 2015 by Martin Wieck
 
-This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.
+###This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.
 
 You can find a full description of the source used in this project at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
@@ -17,9 +17,9 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
 
-Because in this task we only had to extract the features on the mean and standard deviation for each measurement, I only extract the maesures containing "mean()" or "std()" by the grep function.
+Because in this task we only had to extract the features on the mean and standard deviation for each measurement, I only extract the measures containing "mean()" or "std()" by the grep function.
 
-Data Dictionary ("Project_Data.txt"", 180 rows and 68 columns)
+###Data Dictionary ("Project_Data.txt", 180 rows and 68 columns)
 
 Name            Datatype    Values
 activity        factor      "activity_labels.txt" (original Dataset)
@@ -27,34 +27,41 @@ subject_id      int         values from 1..30 (a number for each training/test p
 
 The features in the dataset are all numeric and are the calculated average from the original feature normalized and bounded within -1:+1 :
 
-The abbreviations in the variable names have got the following meaning:
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions
-t           time
-f           frequency
-Body        Body-Signal
-Gravitiy    Gravity-Signal
-Acc         Accelaration
-Gyro        Gyroscope
-Mag         Magnitude
-Jerk        Jerk-Signal
+__The following table explains the abbreviations used in the feature variable names:__  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z direction  
 
-tBodyAcc-XYZ        (means tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z)             
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+Abbreviation | Explanation  
+t            | time  
 
+Abbreviation  | Explanation
+------------- | -------------
+t             | time         
+f  | frequency
+Body    |    Body-Signal  
+Gravitiy |   Gravity-Signal  
+Acc       |  Accelaration  
+Gyro       | Gyroscope  
+Mag         |Magnitude  
+Jerk        |Jerk-Signal  
+
+__features__  (means tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z)  
+
+* tBodyAcc-XYZ                    
+* tGravityAcc-XYZ  
+* tBodyAccJerk-XYZ  
+* tBodyGyro-XYZ  
+* tBodyGyroJerk-XYZ  
+* tBodyAccMag  
+* tGravityAccMag  
+* tBodyAccJerkMag  
+* tBodyGyroMag  
+* tBodyGyroJerkMag  
+* fBodyAcc-XYZ  
+* fBodyAccJerk-XYZ  
+* fBodyGyro-XYZ  
+* fBodyAccMag  
+* fBodyAccJerkMag  
+* fBodyGyroMag  
+* fBodyGyroJerkMag  
 
 
