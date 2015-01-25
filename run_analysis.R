@@ -57,13 +57,6 @@ train <- cbind(subject_train, y_train, X_train)
 test <- cbind(subject_test, y_test, X_test)
 
 #
-# New column "action" for later recognition what is test and what is training data 
-#
-
-#train <- mutate(train, action = "train")
-#test <- mutate(test, action = "test")
-
-#
 # load and bind a descriptive name for the activity and eliminate the activity_id from the tidy data set
 #
 
@@ -76,7 +69,6 @@ data <- group_by(data, activity, subject_id)
 # calculation the mean for every column in the data set except for action, activity and subject_id
 #
 
-#data_mean <- data[,lapply(.SD,mean), by=c("action","activity","subject_id")]
 data_mean <- data[,lapply(.SD,mean), by=c("activity","subject_id")]
 data_mean <- data_mean[order(subject_id,activity)]
 
