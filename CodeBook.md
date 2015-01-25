@@ -22,17 +22,15 @@ Because in this task we only had to extract the features on the mean and standar
 
 ####Data Dictionary ("Project_Data.txt", 180 rows and 68 columns)
 
-Name            Datatype    Values
-activity        factor      "activity_labels.txt" (original Dataset)
-subject_id      int         values from 1..30 (a number for each training/test person)
+Name  | Datatype | Values
+----- | -------- | -------
+activity     | factor     | "activity_labels.txt" (original Dataset)
+subject_id     | int      | values from 1..30 (a number for each training/test person)
 
 The features in the dataset are all numeric and are the calculated average from the original feature normalized and bounded within -1:+1 :
 
 __The following table explains the abbreviations used in the feature variable names:__  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z direction  
-
-Abbreviation | Explanation  
-t            | time  
 
 Abbreviation  | Explanation
 ------------- | -------------
