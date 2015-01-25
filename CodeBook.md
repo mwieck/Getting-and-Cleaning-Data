@@ -24,7 +24,7 @@ Because in this task we only had to extract the features on the mean and standar
 
 Name  | Datatype | Values
 ----- | -------- | -------
-activity     | factor     | "activity_labels.txt" (original Dataset)
+activity     | factor     | descriptive names such as "WALKING" from "activity_labels.txt" (original Dataset)
 subject_id     | int      | values from 1..30 (a number for each training/test person)
 
 The features in the dataset are all numeric and are the calculated average from the original feature normalized and bounded within -1:+1 :
