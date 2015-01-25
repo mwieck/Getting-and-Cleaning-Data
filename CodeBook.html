@@ -55,22 +55,23 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="getting-and-cleaning-data" class="section level3">
 <h3>Getting and Cleaning Data</h3>
 <p>Course Project January 2015 by Martin Wieck</p>
-</div>
-<div id="this-document-contains-additional-information-about-the-variables-and-transformations-needed-in-the-course-project-from-getting-and-cleaning-data." class="section level3">
-<h3>This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.</h3>
-<p>You can find a full description of the source used in this project at <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</a>.</p>
-<p>The source data can be found here: <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a></p>
-<p>This part describes the output data from task 5 from the course project. For more information please read the README.md and features.txt files in the original dataset.</p>
+<div id="this-document-contains-additional-information-about-the-variables-and-transformations-needed-in-the-course-project-from-getting-and-cleaning-data." class="section level4">
+<h4>This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.</h4>
+<p>You can find a full description of the source used in this project at<br /><a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</a></p>
+<p>The source data can be found here<br /><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a></p>
+<div id="this-part-describes-the-output-data-from-task-5-from-the-course-project.-for-more-information-please-read-the-readme.md-and-features.txt-files-in-the-original-dataset." class="section level5">
+<h5>This part describes the output data from task 5 from the course project. For more information please read the README.md and features.txt files in the original dataset.</h5>
 <p>The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix ‘t’ to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.</p>
 <p>Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).</p>
 <p>Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the ‘f’ to indicate frequency domain signals).</p>
 <p>Because in this task we only had to extract the features on the mean and standard deviation for each measurement, I only extract the measures containing “mean()” or “std()” by the grep function.</p>
 </div>
-<div id="data-dictionary-project_data.txt-180-rows-and-68-columns" class="section level3">
-<h3>Data Dictionary (“Project_Data.txt”, 180 rows and 68 columns)</h3>
+</div>
+<div id="data-dictionary-project_data.txt-180-rows-and-68-columns" class="section level4">
+<h4>Data Dictionary (“Project_Data.txt”, 180 rows and 68 columns)</h4>
 <p>Name Datatype Values activity factor “activity_labels.txt” (original Dataset) subject_id int values from 1..30 (a number for each training/test person)</p>
 <p>The features in the dataset are all numeric and are the calculated average from the original feature normalized and bounded within -1:+1 :</p>
-<p><strong>The following table explains the abbreviations used in the variable names:</strong><br />‘-XYZ’ is used to denote 3-axial signals in the X, Y and Z direction</p>
+<p><strong>The following table explains the abbreviations used in the feature variable names:</strong><br />‘-XYZ’ is used to denote 3-axial signals in the X, Y and Z direction</p>
 <p>Abbreviation | Explanation<br />t | time</p>
 <table>
 <thead>
@@ -112,11 +113,22 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <td align="left">Jerk</td>
 <td align="left">Jerk-Signal</td>
 </tr>
+<tr class="odd">
+<td align="left">mean</td>
+<td align="left">original feature mean</td>
+</tr>
+<tr class="even">
+<td align="left">std</td>
+<td align="left">original feature standard deviation</td>
+</tr>
 </tbody>
 </table>
-<p><strong>features</strong> (means tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z)</p>
+<p><strong>features</strong> (every feature has got a “mean” and “std” value)</p>
 <ul>
-<li>tBodyAcc-XYZ<br /></li>
+<li>tBodyAcc-XYZ
+<ul>
+<li>(e. g. tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_Y, tBodyAcc_std_Z )</li>
+</ul></li>
 <li>tGravityAcc-XYZ<br /></li>
 <li>tBodyAccJerk-XYZ<br /></li>
 <li>tBodyGyro-XYZ<br /></li>
@@ -134,6 +146,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>fBodyGyroMag<br /></li>
 <li>fBodyGyroJerkMag</li>
 </ul>
+</div>
 </div>
 
 

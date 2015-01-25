@@ -1,15 +1,16 @@
-###Getting and Cleaning Data 
+###Getting and Cleaning Data Codebook
 
 Course Project January 2015 by Martin Wieck
 
-###This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.
+####This document contains additional information about the variables and transformations needed in the course project from Getting and Cleaning Data.
 
-You can find a full description of the source used in this project at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+You can find a full description of the source used in this project at  
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The source data can be found here:
+The source data can be found here  
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-This part describes the output data from task 5 from the course project. For more information please read the README.md and features.txt files in the original dataset.
+#####This part describes the output data from task 5 from the course project. For more information please read the README.md and features.txt files in the original dataset.
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 
@@ -19,7 +20,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 
 Because in this task we only had to extract the features on the mean and standard deviation for each measurement, I only extract the measures containing "mean()" or "std()" by the grep function.
 
-###Data Dictionary ("Project_Data.txt", 180 rows and 68 columns)
+####Data Dictionary ("Project_Data.txt", 180 rows and 68 columns)
 
 Name            Datatype    Values
 activity        factor      "activity_labels.txt" (original Dataset)
@@ -42,11 +43,15 @@ Gravitiy |   Gravity-Signal
 Acc       |  Accelaration  
 Gyro       | Gyroscope  
 Mag         |Magnitude  
-Jerk        |Jerk-Signal  
+Jerk        |Jerk-Signal
+mean | original feature mean
+std | original feature standard deviation
 
-__features__  (means tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z)  
+__features__  (every feature has got a "mean" and "std" value)  
 
-* tBodyAcc-XYZ                    
+* tBodyAcc-XYZ
+    + (e. g. tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_Y, tBodyAcc_std_Z )
+
 * tGravityAcc-XYZ  
 * tBodyAccJerk-XYZ  
 * tBodyGyro-XYZ  
